@@ -12,3 +12,85 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
+# Loading project CPRE3810
+# Compile of bshiftr.vhd failed with 1 errors.
+# Compile of bshiftr.vhd failed with 1 errors.
+# Compile of bshiftr.vhd failed with 2 errors.
+# Compile of bshiftr.vhd failed with 1 errors.
+# Compile of bshiftr.vhd was successful.
+# Compile of addsubi.vhd was successful.
+# Compile of ALU.vhd failed with 4 errors.
+# Compile of ALU.vhd was successful.
+# Compile of mux2to1_array_package.vhd was successful.
+# Compile of mux_array_package.vhd was successful.
+# Compile of array_package_0to1.vhd was successful.
+# Compile of andg2.vhd was successful.
+# Compile of xorg2.vhd was successful.
+# Compile of org2.vhd was successful.
+# Compile of busandg2.vhd was successful.
+# Compile of dffg.vhd was successful.
+# Compile of busmux2to1.vhd was successful.
+# Compile of dec5to32.vhd was successful.
+# Compile of extender.vhd was successful.
+# Compile of halfbusmux2to1.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of mem.vhd was successful.
+# Compile of mux32to1.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of regfile.vhd was successful.
+# Compile of ripple_adder.vhd was successful.
+# Compile of addsubi.vhd was successful.
+# Compile of bshiftr.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of RISCVDATA.vhd was successful.
+# Compile of SECONDRISCVDATA.vhd was successful.
+# Compile of tb_addsubi.vhd was successful.
+# Compile of tb_dec5to32.vhd was successful.
+# Compile of tb_dffg.vhd was successful.
+# Compile of tb_extender.vhd was successful.
+# Compile of tb_mem.vhd was successful.
+# Compile of tb_mux32to1.vhd was successful.
+# Compile of tb_reg.vhd was successful.
+# Compile of tb_regfile.vhd was successful.
+# Compile of tb_RIDCVDATA.vhd was successful.
+# Compile of tb_ripple_adder.vhd was successful.
+# Compile of tb_SECONDRISCVDATA.vhd was successful.
+# Compile of tb_bshiftr.vhd failed with 1 errors.
+# 35 compiles, 1 failed with 1 error.
+# Compile of mux2to1_array_package.vhd was successful.
+# Compile of mux_array_package.vhd was successful.
+# Compile of array_package_0to1.vhd was successful.
+# Compile of andg2.vhd was successful.
+# Compile of xorg2.vhd was successful.
+# Compile of org2.vhd was successful.
+# Compile of busandg2.vhd was successful.
+# Compile of dffg.vhd was successful.
+# Compile of busmux2to1.vhd was successful.
+# Compile of dec5to32.vhd was successful.
+# Compile of extender.vhd was successful.
+# Compile of halfbusmux2to1.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of mem.vhd was successful.
+# Compile of mux32to1.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of regfile.vhd was successful.
+# Compile of ripple_adder.vhd was successful.
+# Compile of addsubi.vhd was successful.
+# Compile of bshiftr.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of RISCVDATA.vhd was successful.
+# Compile of SECONDRISCVDATA.vhd was successful.
+# Compile of tb_addsubi.vhd was successful.
+# Compile of tb_dec5to32.vhd was successful.
+# Compile of tb_dffg.vhd was successful.
+# Compile of tb_extender.vhd was successful.
+# Compile of tb_mem.vhd was successful.
+# Compile of tb_mux32to1.vhd was successful.
+# Compile of tb_reg.vhd was successful.
+# Compile of tb_regfile.vhd was successful.
+# Compile of tb_RIDCVDATA.vhd was successful.
+# Compile of tb_ripple_adder.vhd was successful.
+# Compile of tb_SECONDRISCVDATA.vhd was successful.
+# Compile of tb_bshiftr.vhd failed with 1 errors.
+# 35 compiles, 1 failed with 1 error.
+# reading /usr/local/mentor/questasim/linux_x86_64/../modelsim.ini

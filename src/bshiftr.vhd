@@ -1,0 +1,61 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity bshiftr is
+    Port (
+        i_d     : in  std_logic_vector(31 downto 0);  -- input data
+        i_shift : in  std_logic_vector(4 downto 0);   -- shift amount (uses lower 5 bits)
+        i_arith : in  std_logic;                      -- ShiftArith, 0 = logical, 1 = arithmetic
+	i_dir	: in  std_logic;		      -- ShiftDir, 0 = left, 1 = right
+        o_d     : out std_logic_vector(31 downto 0)   -- shifted output
+    );
+end bshiftr;
+
+architecture structural of bshiftr is
+
+    --signals for each stage of the barrel shifter
+    signal s0, s1, s2, s3, s4, sd, sr : std_logic_vector(31 downto 0);
+
+begin
+
+     gen_s0 : for i in 0 to 31 generate
+        s0(i) <= i_d(i+1) when (i < 31 and i_shift(0) = '1') else
+                 (i_arith and i_d(31)) when (i = 31 and i_shift(0) = '1') else
+                 i_d(i);
+    end generate;
+
+   gen_s1 : for i in 0 to 31 generate
+        s1(i) <= s0(i+2) when (i < 30 and i_shift(1) = '1') else
+                 (i_arith and i_d(31)) when (i >= 30 and i_shift(1) = '1') else
+                 s0(i);
+    end generate;
+
+    gen_s2 : for i in 0 to 31 generate
+        s2(i) <= s1(i+4) when (i < 28 and i_shift(2) = '1') else
+                 (i_arith and i_d(31)) when (i >= 28 and i_shift(2) = '1') else
+                 s1(i);
+    end generate;
+
+    gen_s3 : for i in 0 to 31 generate
+        s3(i) <= s2(i+8) when (i < 24 and i_shift(3) = '1') else
+                 (i_arith and i_d(31)) when (i >= 24 and i_shift(3) = '1') else
+                 s2(i);
+    end generate;
+
+   gen_s4 : for i in 0 to 31 generate
+        s4(i) <= s3(i+16) when (i < 16 and i_shift(4) = '1') else
+                 (i_arith and i_d(31)) when (i >= 16 and i_shift(4) = '1') else
+                 s3(i);
+    end generate;
+
+     sd <= s4;
+
+    reverse_loop: for i in 0 to 31 generate
+	sr(i) <= sd(31-i);
+    end generate;
+
+
+o_d <= sd when (i_dir = '1') else sr;
+
+end structural;

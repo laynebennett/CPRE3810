@@ -27,10 +27,10 @@ n@_opt
 OL;O;2025.1_2;82
 R1
 Eaddsubi
-Z2 w1761239653
+Z2 w1761252284
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 273
+!i122 381
 Z5 d/home/layneben/CPRE3810-main/src
 Z6 8/home/layneben/CPRE3810-main/src/addsubi.vhd
 Z7 F/home/layneben/CPRE3810-main/src/addsubi.vhd
@@ -40,9 +40,9 @@ VDceW9No`Q7;joZYHM7DM]1
 !s100 Yo[8EC2Ggf;ViJnjUEea`2
 Z8 OL;C;2025.1_2;82
 32
-Z9 !s110 1761245638
+Z9 !s110 1761253798
 !i10b 1
-Z10 !s108 1761245638.000000
+Z10 !s108 1761253798.000000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/addsubi.vhd|
 Z12 !s107 /home/layneben/CPRE3810-main/src/addsubi.vhd|
 !i113 0
@@ -53,7 +53,7 @@ Z15 DEx4 work 5 xorg2 0 22 ]nRm43OKZ32f958@JoPK80
 R3
 R4
 DEx4 work 7 addsubi 0 22 DceW9No`Q7;joZYHM7DM]1
-!i122 273
+!i122 381
 l51
 L18 63
 VU7]cZ@QdWT9`00o;XlIH;2
@@ -68,37 +68,37 @@ R12
 !i113 0
 R13
 R14
-Eandg2
-R2
+Ealu
+Z16 w1761252893
 R3
 R4
-!i122 258
+!i122 383
 R5
-Z16 8/home/layneben/CPRE3810-main/src/andg2.vhd
-Z17 F/home/layneben/CPRE3810-main/src/andg2.vhd
+Z17 8/home/layneben/CPRE3810-main/src/ALU.vhd
+Z18 F/home/layneben/CPRE3810-main/src/ALU.vhd
 l0
-Z18 L23 1
-VlRF1X2AR494<^2b5EczMG2
-!s100 YT?bGzEmcFo:DlnoC^B4_0
+L5 1
+VE<Ha89WHI^@dfacFnT1T?2
+!s100 SgQb[j:3^L?5K:a2Gibm]3
 R8
 32
 R9
 !i10b 1
 R10
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/andg2.vhd|
-Z20 !s107 /home/layneben/CPRE3810-main/src/andg2.vhd|
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/ALU.vhd|
+Z20 !s107 /home/layneben/CPRE3810-main/src/ALU.vhd|
 !i113 0
 R13
 R14
-Adataflow
+Astructure
 R3
 R4
-DEx4 work 5 andg2 0 22 lRF1X2AR494<^2b5EczMG2
-!i122 258
-l32
-Z21 L31 6
-V;W?oPbX<ObC2SkM60=NoE2
-!s100 I`@Z@UBObS]<7m8bPgKUS1
+DEx4 work 3 alu 0 22 E<Ha89WHI^@dfacFnT1T?2
+!i122 383
+l59
+L21 77
+VXcZJKzCzRmj>PgzRCZXo63
+!s100 KJTU?E`Sc3TAA:04B>Ini1
 R8
 32
 R9
@@ -109,11 +109,52 @@ R20
 !i113 0
 R13
 R14
+Eandg2
+Z21 w1761239653
+R3
+R4
+!i122 366
+R5
+Z22 8/home/layneben/CPRE3810-main/src/andg2.vhd
+Z23 F/home/layneben/CPRE3810-main/src/andg2.vhd
+l0
+Z24 L23 1
+VlRF1X2AR494<^2b5EczMG2
+!s100 YT?bGzEmcFo:DlnoC^B4_0
+R8
+32
+Z25 !s110 1761253797
+!i10b 1
+Z26 !s108 1761253797.000000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/andg2.vhd|
+Z28 !s107 /home/layneben/CPRE3810-main/src/andg2.vhd|
+!i113 0
+R13
+R14
+Adataflow
+R3
+R4
+DEx4 work 5 andg2 0 22 lRF1X2AR494<^2b5EczMG2
+!i122 366
+l32
+Z29 L31 6
+V;W?oPbX<ObC2SkM60=NoE2
+!s100 I`@Z@UBObS]<7m8bPgKUS1
+R8
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 0
+R13
+R14
 Parray_package_0to1
 R3
 R4
-!i122 257
-R2
+!i122 365
+R21
 R5
 8/home/layneben/CPRE3810-main/src/array_package_0to1.vhd
 F/home/layneben/CPRE3810-main/src/array_package_0to1.vhd
@@ -123,33 +164,74 @@ V9[a?93OeRa_Kj@D^h<[c?0
 !s100 EQ<X6VKT<BAjFHckP>>R22
 R8
 32
-R9
+R25
 !i10b 1
-R10
+R26
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/array_package_0to1.vhd|
 !s107 /home/layneben/CPRE3810-main/src/array_package_0to1.vhd|
 !i113 0
 R13
 R14
-Ebusandg2
-R2
+Ebshiftr
+Z30 w1761250788
 R3
 R4
-!i122 261
+!i122 382
 R5
-Z22 8/home/layneben/CPRE3810-main/src/busandg2.vhd
-Z23 F/home/layneben/CPRE3810-main/src/busandg2.vhd
+Z31 8/home/layneben/CPRE3810-main/src/bshiftr.vhd
+Z32 F/home/layneben/CPRE3810-main/src/bshiftr.vhd
+l0
+L5 1
+VA?ZTYTiYkFAR0F5j@D3YP3
+!s100 Z4K<=?I1<k6X4RMX_PeSk1
+R8
+32
+R9
+!i10b 1
+R10
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/bshiftr.vhd|
+Z34 !s107 /home/layneben/CPRE3810-main/src/bshiftr.vhd|
+!i113 0
+R13
+R14
+Astructural
+R3
+R4
+DEx4 work 7 bshiftr 0 22 A?ZTYTiYkFAR0F5j@D3YP3
+!i122 382
+l20
+L15 47
+V?SFlACf?ZW64JLY=F]G8B0
+!s100 d]=j`0:P[<KcA[V=94@_T0
+R8
+32
+R9
+!i10b 1
+R10
+R33
+R34
+!i113 0
+R13
+R14
+Ebusandg2
+R21
+R3
+R4
+!i122 369
+R5
+Z35 8/home/layneben/CPRE3810-main/src/busandg2.vhd
+Z36 F/home/layneben/CPRE3810-main/src/busandg2.vhd
 l0
 L5 1
 ViGTdi;nCXQ>kS8V9T6YY13
 !s100 >lIe@lgCHOcU3If4BVoRB2
 R8
 32
-R9
+R25
 !i10b 1
-R10
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/busandg2.vhd|
-Z25 !s107 /home/layneben/CPRE3810-main/src/busandg2.vhd|
+R26
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/busandg2.vhd|
+Z38 !s107 /home/layneben/CPRE3810-main/src/busandg2.vhd|
 !i113 0
 R13
 R14
@@ -157,83 +239,83 @@ Adataflow
 R3
 R4
 DEx4 work 8 busandg2 0 22 iGTdi;nCXQ>kS8V9T6YY13
-!i122 261
+!i122 369
 l14
 L13 6
 V4HO6LT[a1bcfFVMzBHP4Q0
 !s100 m=MJWfgHgWzJiIT2=8FCf0
 R8
 32
-R9
-!i10b 1
-R10
-R24
 R25
+!i10b 1
+R26
+R37
+R38
 !i113 0
 R13
 R14
 Ebusmux2to1
-R2
-Z26 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R21
+Z39 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R3
 R4
-!i122 263
+!i122 371
 R5
-Z27 8/home/layneben/CPRE3810-main/src/busmux2to1.vhd
-Z28 F/home/layneben/CPRE3810-main/src/busmux2to1.vhd
+Z40 8/home/layneben/CPRE3810-main/src/busmux2to1.vhd
+Z41 F/home/layneben/CPRE3810-main/src/busmux2to1.vhd
 l0
 L6 1
 VCmeWz[Qa?@cBD<2i0MJfV1
 !s100 GZ4lAA9^R`7JXkLK]zE:@3
 R8
 32
-R9
+R25
 !i10b 1
-R10
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/busmux2to1.vhd|
-Z30 !s107 /home/layneben/CPRE3810-main/src/busmux2to1.vhd|
+R26
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/busmux2to1.vhd|
+Z43 !s107 /home/layneben/CPRE3810-main/src/busmux2to1.vhd|
 !i113 0
 R13
 R14
 Adataflow
-R26
+R39
 R3
 R4
 DEx4 work 10 busmux2to1 0 22 CmeWz[Qa?@cBD<2i0MJfV1
-!i122 263
+!i122 371
 l17
-Z31 L15 8
+Z44 L15 8
 Vo1Vn5dY_WoJN`2KYO27mV0
 !s100 ]8PRQUKITkhgYazVceYOd3
 R8
 32
-R9
+R25
 !i10b 1
-R10
-R29
-R30
+R26
+R42
+R43
 !i113 0
 R13
 R14
 Edec5to32
-R2
+R21
 R3
 R4
-!i122 264
+!i122 372
 R5
-Z32 8/home/layneben/CPRE3810-main/src/dec5to32.vhd
-Z33 F/home/layneben/CPRE3810-main/src/dec5to32.vhd
+Z45 8/home/layneben/CPRE3810-main/src/dec5to32.vhd
+Z46 F/home/layneben/CPRE3810-main/src/dec5to32.vhd
 l0
 L5 1
 V:RnOYQ1`AOi?^?Lolm?n^3
 !s100 LAeC=j11T?0@A^1o9<imM2
 R8
 32
-R9
+R25
 !i10b 1
-R10
-Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/dec5to32.vhd|
-Z35 !s107 /home/layneben/CPRE3810-main/src/dec5to32.vhd|
+R26
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/dec5to32.vhd|
+Z48 !s107 /home/layneben/CPRE3810-main/src/dec5to32.vhd|
 !i113 0
 R13
 R14
@@ -241,40 +323,40 @@ Adataflow
 R3
 R4
 DEx4 work 8 dec5to32 0 22 :RnOYQ1`AOi?^?Lolm?n^3
-!i122 264
+!i122 372
 l15
 L13 48
 Vn[YVK6TP2IIY2Eb@IgLVE3
 !s100 7AYjWNbmmaWGD;;^[=9I]3
 R8
 32
-R9
+R25
 !i10b 1
-R10
-R34
-R35
+R26
+R47
+R48
 !i113 0
 R13
 R14
 Edffg
-R2
+R21
 R3
 R4
-!i122 262
+!i122 370
 R5
-Z36 8/home/layneben/CPRE3810-main/src/dffg.vhd
-Z37 F/home/layneben/CPRE3810-main/src/dffg.vhd
+Z49 8/home/layneben/CPRE3810-main/src/dffg.vhd
+Z50 F/home/layneben/CPRE3810-main/src/dffg.vhd
 l0
-R18
+R24
 VjgD_<UZ1zVBDW^mk^5TO10
 !s100 T4gcXQGMCgKJbn8XhBM;b0
 R8
 32
-R9
+R25
 !i10b 1
-R10
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/dffg.vhd|
-Z39 !s107 /home/layneben/CPRE3810-main/src/dffg.vhd|
+R26
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/dffg.vhd|
+Z52 !s107 /home/layneben/CPRE3810-main/src/dffg.vhd|
 !i113 0
 R13
 R14
@@ -282,72 +364,72 @@ Amixed
 R3
 R4
 DEx4 work 4 dffg 0 22 jgD_<UZ1zVBDW^mk^5TO10
-!i122 262
+!i122 370
 l37
 L33 29
 Vf;Mb[CToCHDb6>olH_6Sd3
 !s100 iOdlTUid@@]UimFK_53^C1
 R8
 32
-R9
+R25
 !i10b 1
-R10
-R38
-R39
+R26
+R51
+R52
 !i113 0
 R13
 R14
 Eextender
-R2
-R26
+R21
+R39
 R3
 R4
-!i122 265
+!i122 373
 R5
-Z40 8/home/layneben/CPRE3810-main/src/extender.vhd
-Z41 F/home/layneben/CPRE3810-main/src/extender.vhd
+Z53 8/home/layneben/CPRE3810-main/src/extender.vhd
+Z54 F/home/layneben/CPRE3810-main/src/extender.vhd
 l0
 L6 1
 Vf`Q6J;J4[P<]]1f39JIl81
 !s100 n;KohAWDmI:YjHk1gTnZS1
 R8
 32
-R9
+R25
 !i10b 1
-R10
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/extender.vhd|
-Z43 !s107 /home/layneben/CPRE3810-main/src/extender.vhd|
+R26
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/extender.vhd|
+Z56 !s107 /home/layneben/CPRE3810-main/src/extender.vhd|
 !i113 0
 R13
 R14
 Astructure
-R26
+R39
 R3
 R4
-Z44 DEx4 work 8 extender 0 22 f`Q6J;J4[P<]]1f39JIl81
-!i122 265
+Z57 DEx4 work 8 extender 0 22 f`Q6J;J4[P<]]1f39JIl81
+!i122 373
 l34
 L19 35
 VO@MaFBj3[lVNVNeR8_kn32
 !s100 ^DNM0nVQfiMzBom:H_2`=3
 R8
 32
-R9
+R25
 !i10b 1
-R10
-R42
-R43
+R26
+R55
+R56
 !i113 0
 R13
 R14
 Efull_adder
-R2
+R21
 R3
 R4
-!i122 267
+!i122 375
 R5
-Z45 8/home/layneben/CPRE3810-main/src/full_adder.vhd
-Z46 F/home/layneben/CPRE3810-main/src/full_adder.vhd
+Z58 8/home/layneben/CPRE3810-main/src/full_adder.vhd
+Z59 F/home/layneben/CPRE3810-main/src/full_adder.vhd
 l0
 L4 1
 VBQJCaRIADh@UZ^?[[N]bO3
@@ -356,9 +438,9 @@ R8
 32
 R9
 !i10b 1
-R10
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/full_adder.vhd|
-Z48 !s107 /home/layneben/CPRE3810-main/src/full_adder.vhd|
+R26
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/full_adder.vhd|
+Z61 !s107 /home/layneben/CPRE3810-main/src/full_adder.vhd|
 !i113 0
 R13
 R14
@@ -366,7 +448,7 @@ Astructure
 R3
 R4
 DEx4 work 10 full_adder 0 22 BQJCaRIADh@UZ^?[[N]bO3
-!i122 267
+!i122 375
 l45
 L14 42
 VUHOELHFFB<VoC<V0YYklz2
@@ -375,64 +457,64 @@ R8
 32
 R9
 !i10b 1
-R10
-R47
-R48
+R26
+R60
+R61
 !i113 0
 R13
 R14
 Ehalfbusmux2to1
-R2
-R26
+R21
+R39
 R3
 R4
-!i122 266
+!i122 374
 R5
-Z49 8/home/layneben/CPRE3810-main/src/halfbusmux2to1.vhd
-Z50 F/home/layneben/CPRE3810-main/src/halfbusmux2to1.vhd
+Z62 8/home/layneben/CPRE3810-main/src/halfbusmux2to1.vhd
+Z63 F/home/layneben/CPRE3810-main/src/halfbusmux2to1.vhd
 l0
 L6 1
 V2<Oi@[0K>jPR`VWL7W5aB2
 !s100 0>OHokB[eC<_`L7o?:=o`3
 R8
 32
-R9
+R25
 !i10b 1
-R10
-Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/halfbusmux2to1.vhd|
-Z52 !s107 /home/layneben/CPRE3810-main/src/halfbusmux2to1.vhd|
+R26
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/halfbusmux2to1.vhd|
+Z65 !s107 /home/layneben/CPRE3810-main/src/halfbusmux2to1.vhd|
 !i113 0
 R13
 R14
 Adataflow
-R26
+R39
 R3
 R4
 DEx4 work 14 halfbusmux2to1 0 22 2<Oi@[0K>jPR`VWL7W5aB2
-!i122 266
+!i122 374
 l17
-R31
+R44
 VA:^2:anB`cz@:_4B@`KSf3
 !s100 <jPdZ5>50B]E4?lfZnP8]1
 R8
 32
-R9
+R25
 !i10b 1
-R10
-R51
-R52
+R26
+R64
+R65
 !i113 0
 R13
 R14
 Emem
-R2
-R26
+R21
+R39
 R3
 R4
-!i122 268
+!i122 376
 R5
-Z53 8/home/layneben/CPRE3810-main/src/mem.vhd
-Z54 F/home/layneben/CPRE3810-main/src/mem.vhd
+Z66 8/home/layneben/CPRE3810-main/src/mem.vhd
+Z67 F/home/layneben/CPRE3810-main/src/mem.vhd
 l0
 L8 1
 VCIA?Dj3Mm_l0m@`CClQMl0
@@ -442,17 +524,17 @@ R8
 R9
 !i10b 1
 R10
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/mem.vhd|
-Z56 !s107 /home/layneben/CPRE3810-main/src/mem.vhd|
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/mem.vhd|
+Z69 !s107 /home/layneben/CPRE3810-main/src/mem.vhd|
 !i113 0
 R13
 R14
 Artl
-R26
+R39
 R3
 R4
 DEx4 work 3 mem 0 22 CIA?Dj3Mm_l0m@`CClQMl0
-!i122 268
+!i122 376
 l37
 L27 24
 VH8m[_WC46V;E>EkG3<H:a0
@@ -462,16 +544,16 @@ R8
 R9
 !i10b 1
 R10
-R55
-R56
+R68
+R69
 !i113 0
 R13
 R14
 Pmux2to1_array_package
 R3
 R4
-!i122 255
-R2
+!i122 363
+R21
 R5
 8/home/layneben/CPRE3810-main/src/mux2to1_array_package.vhd
 F/home/layneben/CPRE3810-main/src/mux2to1_array_package.vhd
@@ -481,24 +563,24 @@ V]^hQYMGO@A<M4Z0XKkN5m2
 !s100 USDUWjL[1Iz;ZQ>1n4GB?3
 R8
 32
-Z57 !s110 1761245637
+R25
 !i10b 1
-Z58 !s108 1761245637.000000
+R26
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/mux2to1_array_package.vhd|
 !s107 /home/layneben/CPRE3810-main/src/mux2to1_array_package.vhd|
 !i113 0
 R13
 R14
 Emux32to1
-R2
-R26
-Z59 DPx4 work 17 mux_array_package 0 22 B>XBlFI7_Y]mNG@[<4Y2I2
+R21
+R39
+Z70 DPx4 work 17 mux_array_package 0 22 B>XBlFI7_Y]mNG@[<4Y2I2
 R3
 R4
-!i122 269
+!i122 377
 R5
-Z60 8/home/layneben/CPRE3810-main/src/mux32to1.vhd
-Z61 F/home/layneben/CPRE3810-main/src/mux32to1.vhd
+Z71 8/home/layneben/CPRE3810-main/src/mux32to1.vhd
+Z72 F/home/layneben/CPRE3810-main/src/mux32to1.vhd
 l0
 L7 1
 Vbd^?]TZJhcz9S<35gBm0j2
@@ -508,20 +590,20 @@ R8
 R9
 !i10b 1
 R10
-Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/mux32to1.vhd|
-Z63 !s107 /home/layneben/CPRE3810-main/src/mux32to1.vhd|
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/mux32to1.vhd|
+Z74 !s107 /home/layneben/CPRE3810-main/src/mux32to1.vhd|
 !i113 0
 R13
 R14
 Adataflow
-R26
-R59
+R39
+R70
 R3
 R4
 DEx4 work 8 mux32to1 0 22 bd^?]TZJhcz9S<35gBm0j2
-!i122 269
+!i122 377
 l17
-R31
+R44
 VYa[5ldkP7_:EC]<5z6Lgk1
 !s100 [^U0Jb]]Mzmhl5gBcITG62
 R8
@@ -529,16 +611,16 @@ R8
 R9
 !i10b 1
 R10
-R62
-R63
+R73
+R74
 !i113 0
 R13
 R14
 Pmux_array_package
 R3
 R4
-!i122 256
-R2
+!i122 364
+R21
 R5
 8/home/layneben/CPRE3810-main/src/mux_array_package.vhd
 F/home/layneben/CPRE3810-main/src/mux_array_package.vhd
@@ -548,33 +630,33 @@ VB>XBlFI7_Y]mNG@[<4Y2I2
 !s100 fz4<XmF>QjYLgdI74[5F22
 R8
 32
-R57
+R25
 !i10b 1
-R58
+R26
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/mux_array_package.vhd|
 !s107 /home/layneben/CPRE3810-main/src/mux_array_package.vhd|
 !i113 0
 R13
 R14
 Eorg2
-R2
+R21
 R3
 R4
-!i122 260
+!i122 368
 R5
-Z64 8/home/layneben/CPRE3810-main/src/org2.vhd
-Z65 F/home/layneben/CPRE3810-main/src/org2.vhd
+Z75 8/home/layneben/CPRE3810-main/src/org2.vhd
+Z76 F/home/layneben/CPRE3810-main/src/org2.vhd
 l0
-R18
+R24
 VB2]3[a<V5f9`9eUg6`KhC1
 !s100 bGQ1F9eW^Q17OoL9h4g7z2
 R8
 32
-R9
+R25
 !i10b 1
-R10
-Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/org2.vhd|
-Z67 !s107 /home/layneben/CPRE3810-main/src/org2.vhd|
+R26
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/org2.vhd|
+Z78 !s107 /home/layneben/CPRE3810-main/src/org2.vhd|
 !i113 0
 R13
 R14
@@ -582,29 +664,29 @@ Adataflow
 R3
 R4
 DEx4 work 4 org2 0 22 B2]3[a<V5f9`9eUg6`KhC1
-!i122 260
+!i122 368
 l32
-R21
+R29
 VkAR2[YaYRaj6fWNP]W0nE3
 !s100 h5_AzR3TdRA0a_K=dQ>mI2
 R8
 32
-R9
+R25
 !i10b 1
-R10
-R66
-R67
+R26
+R77
+R78
 !i113 0
 R13
 R14
 Ereg
-R2
+R21
 R3
 R4
-!i122 270
+!i122 378
 R5
-Z68 8/home/layneben/CPRE3810-main/src/reg.vhd
-Z69 F/home/layneben/CPRE3810-main/src/reg.vhd
+Z79 8/home/layneben/CPRE3810-main/src/reg.vhd
+Z80 F/home/layneben/CPRE3810-main/src/reg.vhd
 l0
 L5 1
 VTc2^Sl<dL7HNZ6Cg[b1P?1
@@ -614,8 +696,8 @@ R8
 R9
 !i10b 1
 R10
-Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/reg.vhd|
-Z71 !s107 /home/layneben/CPRE3810-main/src/reg.vhd|
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/reg.vhd|
+Z82 !s107 /home/layneben/CPRE3810-main/src/reg.vhd|
 !i113 0
 R13
 R14
@@ -623,7 +705,7 @@ Astructure
 R3
 R4
 DEx4 work 3 reg 0 22 Tc2^Sl<dL7HNZ6Cg[b1P?1
-!i122 270
+!i122 378
 l27
 L17 24
 VV0F3BLNNA1jlYzLaG6>?I2
@@ -633,20 +715,20 @@ R8
 R9
 !i10b 1
 R10
-R70
-R71
+R81
+R82
 !i113 0
 R13
 R14
 Eregfile
-R2
-R59
+R21
+R70
 R3
 R4
-!i122 271
+!i122 379
 R5
-Z72 8/home/layneben/CPRE3810-main/src/regfile.vhd
-Z73 F/home/layneben/CPRE3810-main/src/regfile.vhd
+Z83 8/home/layneben/CPRE3810-main/src/regfile.vhd
+Z84 F/home/layneben/CPRE3810-main/src/regfile.vhd
 l0
 L6 1
 Vm8?V3jkC;Q]EKkZFi87hY2
@@ -656,17 +738,17 @@ R8
 R9
 !i10b 1
 R10
-Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/regfile.vhd|
-Z75 !s107 /home/layneben/CPRE3810-main/src/regfile.vhd|
+Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/regfile.vhd|
+Z86 !s107 /home/layneben/CPRE3810-main/src/regfile.vhd|
 !i113 0
 R13
 R14
 Astructure
-R59
+R70
 R3
 R4
 DEx4 work 7 regfile 0 22 m8?V3jkC;Q]EKkZFi87hY2
-!i122 271
+!i122 379
 l55
 L23 66
 VP1<ETA2N2@EKf@j6iSC2d0
@@ -676,19 +758,19 @@ R8
 R9
 !i10b 1
 R10
-R74
-R75
+R85
+R86
 !i113 0
 R13
 R14
 Eripple_adder
-R2
+R21
 R3
 R4
-!i122 272
+!i122 380
 R5
-Z76 8/home/layneben/CPRE3810-main/src/ripple_adder.vhd
-Z77 F/home/layneben/CPRE3810-main/src/ripple_adder.vhd
+Z87 8/home/layneben/CPRE3810-main/src/ripple_adder.vhd
+Z88 F/home/layneben/CPRE3810-main/src/ripple_adder.vhd
 l0
 L4 1
 VCVRK]7MFl=dJKoB6F6dYZ3
@@ -698,8 +780,8 @@ R8
 R9
 !i10b 1
 R10
-Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/ripple_adder.vhd|
-Z79 !s107 /home/layneben/CPRE3810-main/src/ripple_adder.vhd|
+Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/ripple_adder.vhd|
+Z90 !s107 /home/layneben/CPRE3810-main/src/ripple_adder.vhd|
 !i113 0
 R13
 R14
@@ -707,7 +789,7 @@ Astructure
 R3
 R4
 DEx4 work 12 ripple_adder 0 22 CVRK]7MFl=dJKoB6F6dYZ3
-!i122 272
+!i122 380
 l29
 L15 32
 VG:C6D74fZQ5>L00PZhz@30
@@ -717,116 +799,116 @@ R8
 R9
 !i10b 1
 R10
-R78
-R79
+R89
+R90
 !i113 0
 R13
 R14
 Eriscvdata
-R2
-R59
+R21
+R70
 R3
 R4
-!i122 274
+!i122 384
 R5
-Z80 8/home/layneben/CPRE3810-main/src/RISCVDATA.vhd
-Z81 F/home/layneben/CPRE3810-main/src/RISCVDATA.vhd
+Z91 8/home/layneben/CPRE3810-main/src/RISCVDATA.vhd
+Z92 F/home/layneben/CPRE3810-main/src/RISCVDATA.vhd
 l0
 L6 1
 V1z@oBE2_YEfdP8:f6UeQY2
 !s100 3ZoccXl]_CSZMiaYek]Xd0
 R8
 32
-Z82 !s110 1761245639
+R9
 !i10b 1
 R10
-Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/RISCVDATA.vhd|
-Z84 !s107 /home/layneben/CPRE3810-main/src/RISCVDATA.vhd|
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/RISCVDATA.vhd|
+Z94 !s107 /home/layneben/CPRE3810-main/src/RISCVDATA.vhd|
 !i113 0
 R13
 R14
 Astructure
-R59
+R70
 R3
 R4
 DEx4 work 9 riscvdata 0 22 1z@oBE2_YEfdP8:f6UeQY2
-!i122 274
+!i122 384
 l58
 L25 62
 V1Tk1m;bOz4;_8NIiWgVcZ0
 !s100 JL[z`5@OVj_4SNgA?i0mg2
 R8
 32
-R82
+R9
 !i10b 1
 R10
-R83
-R84
+R93
+R94
 !i113 0
 R13
 R14
 Esecondriscvdata
-R2
-R59
+R21
+R70
 R3
 R4
-!i122 275
+!i122 385
 R5
-Z85 8/home/layneben/CPRE3810-main/src/SECONDRISCVDATA.vhd
-Z86 F/home/layneben/CPRE3810-main/src/SECONDRISCVDATA.vhd
+Z95 8/home/layneben/CPRE3810-main/src/SECONDRISCVDATA.vhd
+Z96 F/home/layneben/CPRE3810-main/src/SECONDRISCVDATA.vhd
 l0
 L7 1
 VQ7:Ed1@mAJ^Ha3=7[ZKo80
 !s100 b<eQQ;jo4:8NZ><f^MNVU3
 R8
 32
-R82
+R9
 !i10b 1
-Z87 !s108 1761245639.000000
-Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/SECONDRISCVDATA.vhd|
-Z89 !s107 /home/layneben/CPRE3810-main/src/SECONDRISCVDATA.vhd|
+R10
+Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/SECONDRISCVDATA.vhd|
+Z98 !s107 /home/layneben/CPRE3810-main/src/SECONDRISCVDATA.vhd|
 !i113 0
 R13
 R14
 Astructure
-R59
+R70
 R3
 R4
 DEx4 work 15 secondriscvdata 0 22 Q7:Ed1@mAJ^Ha3=7[ZKo80
-!i122 275
+!i122 385
 l99
 L29 124
 V[;6YfRWj<HboJ;2I=M<=V3
 !s100 ER>aDI8<`RfPil41D0m<;0
 R8
 32
-R82
+R9
 !i10b 1
-R87
-R88
-R89
+R10
+R97
+R98
 !i113 0
 R13
 R14
 Etb_addsubi
-R2
+R21
 R3
 R4
-!i122 276
+!i122 386
 R5
-Z90 8/home/layneben/CPRE3810-main/test/tb_addsubi.vhd
-Z91 F/home/layneben/CPRE3810-main/test/tb_addsubi.vhd
+Z99 8/home/layneben/CPRE3810-main/test/tb_addsubi.vhd
+Z100 F/home/layneben/CPRE3810-main/test/tb_addsubi.vhd
 l0
 L5 1
 Vz<j@11n6jmGJa>72nXJV=0
 !s100 8P1WYcePjN08OM]@RnPiW3
 R8
 32
-R82
+R9
 !i10b 1
-R87
-Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_addsubi.vhd|
-Z93 !s107 /home/layneben/CPRE3810-main/test/tb_addsubi.vhd|
+R10
+Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_addsubi.vhd|
+Z102 !s107 /home/layneben/CPRE3810-main/test/tb_addsubi.vhd|
 !i113 0
 R13
 R14
@@ -834,40 +916,40 @@ Abehavior
 R3
 R4
 DEx4 work 10 tb_addsubi 0 22 z<j@11n6jmGJa>72nXJV=0
-!i122 276
+!i122 386
 l39
 L13 127
 Vlf`3LQ5FHF9:HRWYm7;@n0
 !s100 iM9<:Gl7@IoEJGbnT0zdP1
 R8
 32
-R82
+R9
 !i10b 1
-R87
-R92
-R93
+R10
+R101
+R102
 !i113 0
 R13
 R14
 Etb_dec5to32
-R2
+R21
 R3
 R4
-!i122 277
+!i122 387
 R5
-Z94 8/home/layneben/CPRE3810-main/test/tb_dec5to32.vhd
-Z95 F/home/layneben/CPRE3810-main/test/tb_dec5to32.vhd
+Z103 8/home/layneben/CPRE3810-main/test/tb_dec5to32.vhd
+Z104 F/home/layneben/CPRE3810-main/test/tb_dec5to32.vhd
 l0
 L5 1
 V_o3@UHl?ol2LPK1j4G=CO0
 !s100 cOi@Hei`POZniGb`Lg5AM1
 R8
 32
-R82
+R9
 !i10b 1
-R87
-Z96 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_dec5to32.vhd|
-Z97 !s107 /home/layneben/CPRE3810-main/test/tb_dec5to32.vhd|
+R10
+Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_dec5to32.vhd|
+Z106 !s107 /home/layneben/CPRE3810-main/test/tb_dec5to32.vhd|
 !i113 0
 R13
 R14
@@ -875,40 +957,40 @@ Abehavior
 R3
 R4
 DEx4 work 11 tb_dec5to32 0 22 _o3@UHl?ol2LPK1j4G=CO0
-!i122 277
+!i122 387
 l28
 L11 49
 V4V0C;QoDZ?4o]H>?V1XDW2
 !s100 jb084O<?LOfR_BiQ67oS@0
 R8
 32
-R82
+R9
 !i10b 1
-R87
-R96
-R97
+R10
+R105
+R106
 !i113 0
 R13
 R14
 Etb_dffg
-R2
+R21
 R3
 R4
-!i122 278
+!i122 388
 R5
-Z98 8/home/layneben/CPRE3810-main/test/tb_dffg.vhd
-Z99 F/home/layneben/CPRE3810-main/test/tb_dffg.vhd
+Z107 8/home/layneben/CPRE3810-main/test/tb_dffg.vhd
+Z108 F/home/layneben/CPRE3810-main/test/tb_dffg.vhd
 l0
-R18
+R24
 Vi7MNLj5ZK:^Q2o?NA]M4]2
 !s100 _@1Y`b4>C@@3dFKeCkFbz1
 R8
 32
-R82
+R9
 !i10b 1
-R87
-Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_dffg.vhd|
-Z101 !s107 /home/layneben/CPRE3810-main/test/tb_dffg.vhd|
+R10
+Z109 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_dffg.vhd|
+Z110 !s107 /home/layneben/CPRE3810-main/test/tb_dffg.vhd|
 !i113 0
 R13
 R14
@@ -916,170 +998,170 @@ Abehavior
 R3
 R4
 DEx4 work 7 tb_dffg 0 22 i7MNLj5ZK:^Q2o?NA]M4]2
-!i122 278
+!i122 388
 l45
 L27 75
 Vn@[=?0R`<abIB7e8G;YNi1
 !s100 McQ;1U@Ti8TCBh>42ldW82
 R8
 32
-R82
+R9
 !i10b 1
-R87
-R100
-R101
+R10
+R109
+R110
 !i113 0
 R13
 R14
 Etb_extender
-R2
-R26
+R21
+R39
 R3
 R4
-!i122 279
+!i122 389
 R5
-Z102 8/home/layneben/CPRE3810-main/test/tb_extender.vhd
-Z103 F/home/layneben/CPRE3810-main/test/tb_extender.vhd
+Z111 8/home/layneben/CPRE3810-main/test/tb_extender.vhd
+Z112 F/home/layneben/CPRE3810-main/test/tb_extender.vhd
 l0
 L5 1
 VUhMPOfBnG2?=UcLZ=OaGd2
 !s100 mXQz<^<f>EBWm?3cA`nBm3
 R8
 32
-R82
+R9
 !i10b 1
-R87
-Z104 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_extender.vhd|
-Z105 !s107 /home/layneben/CPRE3810-main/test/tb_extender.vhd|
+R10
+Z113 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_extender.vhd|
+Z114 !s107 /home/layneben/CPRE3810-main/test/tb_extender.vhd|
 !i113 0
 R13
 R14
 Abehavior
-R44
-R26
+R57
+R39
 R3
 R4
 DEx4 work 11 tb_extender 0 22 UhMPOfBnG2?=UcLZ=OaGd2
-!i122 279
+!i122 389
 l22
 L8 63
 VbP@B?PSIf3=?^hziWFd^>3
 !s100 4TQf0HNfH8L32mc:=I:V81
 R8
 32
-R82
+R9
 !i10b 1
-R87
-R104
-R105
+R10
+R113
+R114
 !i113 0
 R13
 R14
 Etb_mem
-R2
-R26
+R21
+R39
 R3
 R4
-!i122 280
+!i122 390
 R5
-Z106 8/home/layneben/CPRE3810-main/test/tb_mem.vhd
-Z107 F/home/layneben/CPRE3810-main/test/tb_mem.vhd
+Z115 8/home/layneben/CPRE3810-main/test/tb_mem.vhd
+Z116 F/home/layneben/CPRE3810-main/test/tb_mem.vhd
 l0
 L8 1
 VYjWYC6^<:fZS71ezJ8kj_1
 !s100 Sk7N=UhNPdlR21>IFXZL`0
 R8
 32
-R82
+R9
 !i10b 1
-R87
-Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_mem.vhd|
-Z109 !s107 /home/layneben/CPRE3810-main/test/tb_mem.vhd|
+R10
+Z117 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_mem.vhd|
+Z118 !s107 /home/layneben/CPRE3810-main/test/tb_mem.vhd|
 !i113 0
 R13
 R14
 Abehavior
-R26
+R39
 R3
 R4
 DEx4 work 6 tb_mem 0 22 YjWYC6^<:fZS71ezJ8kj_1
-!i122 280
+!i122 390
 l57
 L17 103
 V_0>4ekm>:FUYJKGJ5:YVB2
 !s100 FfkDZ8zPhN<W@8NeE37l?3
 R8
 32
-R82
+R9
 !i10b 1
-R87
-R108
-R109
+R10
+R117
+R118
 !i113 0
 R13
 R14
 Etb_mux32to1
-R2
-R59
+R21
+R70
 R3
 R4
-!i122 281
+!i122 391
 R5
-Z110 8/home/layneben/CPRE3810-main/test/tb_mux32to1.vhd
-Z111 F/home/layneben/CPRE3810-main/test/tb_mux32to1.vhd
+Z119 8/home/layneben/CPRE3810-main/test/tb_mux32to1.vhd
+Z120 F/home/layneben/CPRE3810-main/test/tb_mux32to1.vhd
 l0
 L5 1
 V?VXiIOMmV8dg5D8S0XG@E3
 !s100 W=>63_Ae>2nnZZ_oYH?Q<2
 R8
 32
-R82
+R9
 !i10b 1
-R87
-Z112 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_mux32to1.vhd|
-Z113 !s107 /home/layneben/CPRE3810-main/test/tb_mux32to1.vhd|
+R10
+Z121 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_mux32to1.vhd|
+Z122 !s107 /home/layneben/CPRE3810-main/test/tb_mux32to1.vhd|
 !i113 0
 R13
 R14
 Abehavior
-R59
+R70
 R3
 R4
 DEx4 work 11 tb_mux32to1 0 22 ?VXiIOMmV8dg5D8S0XG@E3
-!i122 281
+!i122 391
 l28
 L11 52
 VNE0[3nHAC]fOlLl<>@_ZA0
 !s100 :e:kVk<b>e<@iQA]Wd6Zj0
 R8
 32
-R82
+R9
 !i10b 1
-R87
-R112
-R113
+R10
+R121
+R122
 !i113 0
 R13
 R14
 Etb_reg
-R2
+R21
 R3
 R4
-!i122 282
+!i122 392
 R5
-Z114 8/home/layneben/CPRE3810-main/test/tb_reg.vhd
-Z115 F/home/layneben/CPRE3810-main/test/tb_reg.vhd
+Z123 8/home/layneben/CPRE3810-main/test/tb_reg.vhd
+Z124 F/home/layneben/CPRE3810-main/test/tb_reg.vhd
 l0
 L5 1
 VLX=7YA_Z_j^KE3S]Qa>Mg1
 !s100 jg]Pl^9f>H=c>eAeDe5LV0
 R8
 32
-R82
+R9
 !i10b 1
-R87
-Z116 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_reg.vhd|
-Z117 !s107 /home/layneben/CPRE3810-main/test/tb_reg.vhd|
+R10
+Z125 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_reg.vhd|
+Z126 !s107 /home/layneben/CPRE3810-main/test/tb_reg.vhd|
 !i113 0
 R13
 R14
@@ -1087,212 +1169,212 @@ Abehavior
 R3
 R4
 DEx4 work 6 tb_reg 0 22 LX=7YA_Z_j^KE3S]Qa>Mg1
-!i122 282
+!i122 392
 l29
 L11 75
 VEe2izd_Oh4g]9[MAHB@CS1
 !s100 6lch^G`ZGPeUeHWWPBI;f1
 R8
 32
-R82
+R9
 !i10b 1
-R87
-R116
-R117
+R10
+R125
+R126
 !i113 0
 R13
 R14
 Etb_regfile
-R2
-R59
+R21
+R70
 R3
 R4
-!i122 283
+!i122 393
 R5
-Z118 8/home/layneben/CPRE3810-main/test/tb_regfile.vhd
-Z119 F/home/layneben/CPRE3810-main/test/tb_regfile.vhd
+Z127 8/home/layneben/CPRE3810-main/test/tb_regfile.vhd
+Z128 F/home/layneben/CPRE3810-main/test/tb_regfile.vhd
 l0
 L6 1
 VQEcBP^>g[14akWCJ;EA710
 !s100 DY0SPMmoLeoj?]6^Jln:E0
 R8
 32
-R82
+R9
 !i10b 1
-R87
-Z120 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_regfile.vhd|
-Z121 !s107 /home/layneben/CPRE3810-main/test/tb_regfile.vhd|
+R10
+Z129 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_regfile.vhd|
+Z130 !s107 /home/layneben/CPRE3810-main/test/tb_regfile.vhd|
 !i113 0
 R13
 R14
 Abehavior
-R59
+R70
 R3
 R4
 DEx4 work 10 tb_regfile 0 22 QEcBP^>g[14akWCJ;EA710
-!i122 283
+!i122 393
 l44
 L13 97
 VIo5;]9AJ`RGEhangl;De:3
 !s100 [NZ69B@<3UW1fVoj63en@0
 R8
 32
-R82
+R9
 !i10b 1
-R87
-R120
-R121
+R10
+R129
+R130
 !i113 0
 R13
 R14
 Etb_ripple_adder
-R2
-R26
+R21
+R39
 R3
 R4
-!i122 285
+!i122 395
 R5
-Z122 8/home/layneben/CPRE3810-main/test/tb_ripple_adder.vhd
-Z123 F/home/layneben/CPRE3810-main/test/tb_ripple_adder.vhd
+Z131 8/home/layneben/CPRE3810-main/test/tb_ripple_adder.vhd
+Z132 F/home/layneben/CPRE3810-main/test/tb_ripple_adder.vhd
 l0
 L6 1
 VPeihhkQMS`BNW3a<1`O`c0
 !s100 Gd]<VanFm^46daWhcZR`W0
 R8
 32
-R82
+Z133 !s110 1761253799
 !i10b 1
-R87
-Z124 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_ripple_adder.vhd|
-Z125 !s107 /home/layneben/CPRE3810-main/test/tb_ripple_adder.vhd|
+Z134 !s108 1761253799.000000
+Z135 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_ripple_adder.vhd|
+Z136 !s107 /home/layneben/CPRE3810-main/test/tb_ripple_adder.vhd|
 !i113 0
 R13
 R14
 Abehavior
-R26
+R39
 R3
 R4
 DEx4 work 15 tb_ripple_adder 0 22 PeihhkQMS`BNW3a<1`O`c0
-!i122 285
+!i122 395
 l30
 L9 48
 VWcGZ;^mol@;VMJQPfPiEV1
 !s100 SX?BoR2ak?B4CALb?jJMN2
 R8
 32
-R82
+R133
 !i10b 1
-R87
-R124
-R125
+R134
+R135
+R136
 !i113 0
 R13
 R14
 Etb_riscvdata
-R2
-R26
+R21
+R39
 R3
 R4
-!i122 284
+!i122 394
 R5
-Z126 8/home/layneben/CPRE3810-main/test/tb_RIDCVDATA.vhd
-Z127 F/home/layneben/CPRE3810-main/test/tb_RIDCVDATA.vhd
+Z137 8/home/layneben/CPRE3810-main/test/tb_RIDCVDATA.vhd
+Z138 F/home/layneben/CPRE3810-main/test/tb_RIDCVDATA.vhd
 l0
 L6 1
 VOgUS>cl@^CK2G@hoC;M<Q3
 !s100 ^[3?T2[RMdccjH3TYQ?A[1
 R8
 32
-R82
+R133
 !i10b 1
-R87
-Z128 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_RIDCVDATA.vhd|
-Z129 !s107 /home/layneben/CPRE3810-main/test/tb_RIDCVDATA.vhd|
+R10
+Z139 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_RIDCVDATA.vhd|
+Z140 !s107 /home/layneben/CPRE3810-main/test/tb_RIDCVDATA.vhd|
 !i113 0
 R13
 R14
 Abehavior
-R26
+R39
 R3
 R4
 DEx4 work 12 tb_riscvdata 0 22 OgUS>cl@^CK2G@hoC;M<Q3
-!i122 284
+!i122 394
 l52
 L12 331
 Vh5hJknFSnMV>lkJ2E]kAH3
 !s100 fDSCc<jWJKjFCl=iD3Am<0
 R8
 32
-R82
+R133
 !i10b 1
-R87
-R128
-R129
+R10
+R139
+R140
 !i113 0
 R13
 R14
 Etb_secondriscvdata
-R2
-R26
+R21
+R39
 R3
 R4
-!i122 286
+!i122 396
 R5
-Z130 8/home/layneben/CPRE3810-main/test/tb_SECONDRISCVDATA.vhd
-Z131 F/home/layneben/CPRE3810-main/test/tb_SECONDRISCVDATA.vhd
+Z141 8/home/layneben/CPRE3810-main/test/tb_SECONDRISCVDATA.vhd
+Z142 F/home/layneben/CPRE3810-main/test/tb_SECONDRISCVDATA.vhd
 l0
 L5 1
 V5^Y?k1>D9XOCj8o3zX?]g0
 !s100 k7TaFLL`4k>Mnijf92GnL0
 R8
 32
-R82
+R133
 !i10b 1
-R87
-Z132 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_SECONDRISCVDATA.vhd|
-Z133 !s107 /home/layneben/CPRE3810-main/test/tb_SECONDRISCVDATA.vhd|
+R134
+Z143 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/test/tb_SECONDRISCVDATA.vhd|
+Z144 !s107 /home/layneben/CPRE3810-main/test/tb_SECONDRISCVDATA.vhd|
 !i113 0
 R13
 R14
 Abehavior
-R26
+R39
 R3
 R4
-Z134 DEx4 work 18 tb_secondriscvdata 0 22 5^Y?k1>D9XOCj8o3zX?]g0
-!i122 286
+Z145 DEx4 work 18 tb_secondriscvdata 0 22 5^Y?k1>D9XOCj8o3zX?]g0
+!i122 396
 l48
-Z135 L8 159
-Z136 VGImcg`kI<>D<LPhIaoK601
-Z137 !s100 zRANS`PCXDgHZD@5M@OUA0
+Z146 L8 159
+Z147 VGImcg`kI<>D<LPhIaoK601
+Z148 !s100 zRANS`PCXDgHZD@5M@OUA0
 R8
 32
-R82
-!i10b 1
-R87
-R132
 R133
+!i10b 1
+R134
+R143
+R144
 !i113 0
 R13
 R14
 Exorg2
-R2
+R21
 R3
 R4
-!i122 259
+!i122 367
 R5
-Z138 8/home/layneben/CPRE3810-main/src/xorg2.vhd
-Z139 F/home/layneben/CPRE3810-main/src/xorg2.vhd
+Z149 8/home/layneben/CPRE3810-main/src/xorg2.vhd
+Z150 F/home/layneben/CPRE3810-main/src/xorg2.vhd
 l0
-R18
+R24
 V]nRm43OKZ32f958@JoPK80
 !s100 [hI[mXFH4_j16U;>U1Lfn2
 R8
 32
-R9
+R25
 !i10b 1
-R10
-Z140 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/xorg2.vhd|
-Z141 !s107 /home/layneben/CPRE3810-main/src/xorg2.vhd|
+R26
+Z151 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/layneben/CPRE3810-main/src/xorg2.vhd|
+Z152 !s107 /home/layneben/CPRE3810-main/src/xorg2.vhd|
 !i113 0
 R13
 R14
@@ -1300,18 +1382,18 @@ Adataflow
 R3
 R4
 R15
-!i122 259
+!i122 367
 l32
-R21
+R29
 Vgh7bYI5aJE]odJ7>7;=<U3
 !s100 Z6[FAPS4fBLB`F?OO<AY72
 R8
 32
-R9
+R25
 !i10b 1
-R10
-R140
-R141
+R26
+R151
+R152
 !i113 0
 R13
 R14

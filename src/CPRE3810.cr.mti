@@ -1,4 +1,9 @@
-/home/layneben/CPRE3810-main/src/extender.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/layneben/CPRE3810-main/src/extender.vhd
+/home/layneben/CPRE3810-main/src/tb_bshiftr.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none /home/layneben/CPRE3810-main/src/tb_bshiftr.vhd
+QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+-- Loading package STANDARD
+** Error (suppressible): /home/layneben/CPRE3810-main/src/tb_bshiftr.vhd(2): (vcom-1491) Empty source files.
+
+} {} {}} /home/layneben/CPRE3810-main/src/extender.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/layneben/CPRE3810-main/src/extender.vhd
 QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -24,6 +29,22 @@ QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
 -- Loading package mux_array_package
 -- Compiling entity RISCVDATA
 -- Compiling architecture structure of RISCVDATA
+
+} {} {}} /home/layneben/CPRE3810-main/src/ALU.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/layneben/CPRE3810-main/src/ALU.vhd
+QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ALU
+-- Compiling architecture structure of ALU
+
+} {} {}} /home/layneben/CPRE3810-main/src/bshiftr.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/layneben/CPRE3810-main/src/bshiftr.vhd
+QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity bshiftr
+-- Compiling architecture structural of bshiftr
 
 } {} {}} /home/layneben/CPRE3810-main/test/tb_SECONDRISCVDATA.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/layneben/CPRE3810-main/test/tb_SECONDRISCVDATA.vhd
 QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
@@ -69,14 +90,6 @@ QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
 -- Compiling entity mux32to1
 -- Compiling architecture dataflow of mux32to1
 
-} {} {}} /home/layneben/CPRE3810-main/test/tb_dffg.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/layneben/CPRE3810-main/test/tb_dffg.vhd
-QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity tb_dffg
--- Compiling architecture behavior of tb_dffg
-
 } {} {}} /home/layneben/CPRE3810-main/src/addsubi.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/layneben/CPRE3810-main/src/addsubi.vhd
 QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
 -- Loading package STANDARD
@@ -85,6 +98,14 @@ QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
 -- Compiling entity addsubi
 -- Compiling architecture structure of addsubi
 -- Loading entity xorg2
+
+} {} {}} /home/layneben/CPRE3810-main/test/tb_dffg.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/layneben/CPRE3810-main/test/tb_dffg.vhd
+QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_dffg
+-- Compiling architecture behavior of tb_dffg
 
 } {} {}} /home/layneben/CPRE3810-main/src/andg2.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/layneben/CPRE3810-main/src/andg2.vhd
 QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
