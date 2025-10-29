@@ -8,13 +8,17 @@ entity ALU is
         i_A    : in  std_logic_vector(N-1 downto 0);
         i_B    : in  std_logic_vector(N-1 downto 0);
 	i_imm  : in  std_logic_vector(N-1 downto 0);
-	ALUSrc : in  std_logic;
-	ShiftEn: in  std_logic;
-	ShiftDir : in std_logic;
-	ShiftArith : in std_logic;
+	ALUSrc : in  std_logic; --1 = use imm, 0 = use B
+	AltEn  : in std_logic; --enables shift and gates
+	ShiftEn: in  std_logic; --selects between shift (1) or and/xor/or/nor gates (0)
+	GateEn : in  std_logic_vector(1 downto 0); --00 = and, 01 = xor, 10 = or, 11 = nor
+	BranchSel : in std_logic_vector(1 downto 0); --00 = BEQ, 01 = BGE, 10 = BLT, 11 = BNE 
+	ShiftDir : in std_logic; --0 = left, 1 = right
+	ShiftArith : in std_logic; 
         i_Sub  : in  std_logic; -- 0 = add, 1 = sub
         o_ALU  : out std_logic_vector(N-1 downto 0);
-        o_Cout : out std_logic
+        o_Cout : out std_logic;
+	o_zero : out std_logic
     );
 end ALU;
 
@@ -26,6 +30,15 @@ architecture structure of ALU is
 	i_D0 : in std_logic_vector(31 downto 0);
 	i_D1 : in std_logic_vector(31 downto 0);
 	o_Q : out std_logic_vector(31 downto 0)
+	);
+    end component;
+
+    component mux2to1
+	port(
+	i_S : in std_logic;
+	i_D0 : in std_logic;
+	i_D1 : in std_logic;
+	o_Q : out std_logic
 	);
     end component;
 
@@ -52,9 +65,51 @@ architecture structure of ALU is
     	);
     end component;
 
+    component andg32
+  	port(i_A          : in std_logic_vector(31 downto 0);
+        i_B          : in std_logic_vector(31 downto 0);
+        o_F          : out std_logic_vector(31 downto 0)
+ 	);
+    end component;
+
+    component xorg32
+  	port(i_A          : in std_logic_vector(31 downto 0);
+        i_B          : in std_logic_vector(31 downto 0);
+        o_F          : out std_logic_vector(31 downto 0)
+ 	);
+    end component;
+
+    component org32
+  	port(i_A          : in std_logic_vector(31 downto 0);
+        i_B          : in std_logic_vector(31 downto 0);
+        o_F          : out std_logic_vector(31 downto 0)
+ 	);
+    end component;
+
+    component norg32
+  	port(i_A          : in std_logic_vector(31 downto 0);
+        i_B          : in std_logic_vector(31 downto 0);
+        o_F          : out std_logic_vector(31 downto 0)
+ 	);
+    end component;
+
     signal shiftout : std_logic_vector(N-1 downto 0);
     signal addsubiout : std_logic_vector(N-1 downto 0);
     signal muxtoshift : std_logic_vector(N-1 downto 0);
+    signal andout : std_logic_vector(N-1 downto 0);
+    signal xorout : std_logic_vector(N-1 downto 0);
+    signal orout : std_logic_vector(N-1 downto 0);
+    signal norout : std_logic_vector(N-1 downto 0);
+    signal mux2out : std_logic_vector(N-1 downto 0);
+    signal mux3out : std_logic_vector(N-1 downto 0);
+    signal mux4out : std_logic_vector(N-1 downto 0);
+    signal mux5out : std_logic_vector(N-1 downto 0);
+    signal mux7out : std_logic;
+    signal mux8out : std_logic;
+    signal s_beq : std_logic;
+    signal s_bge : std_logic;
+    signal s_blt : std_logic;
+    signal s_bne : std_logic;
 
 begin
 
@@ -69,10 +124,38 @@ begin
     bshiftr_inst: bshiftr
 	port map(
 	i_d => i_A,
-	i_shift => muxtoshift,
+	i_shift => muxtoshift(4 downto 0),
 	i_arith => ShiftArith,
 	i_dir => ShiftDir,
 	o_d => shiftout
+	);
+
+    andg32_inst: andg32
+	port map(
+	i_A => i_A,
+	i_B => muxtoshift,
+	o_F => andout
+	);
+	
+    xorg32_inst: xorg32
+	port map(
+	i_A => i_A,
+	i_B => muxtoshift,
+	o_F => xorout
+	);
+
+    org32_inst: org32
+	port map(
+	i_A => i_A,
+	i_B => muxtoshift,
+	o_F => orout
+	);
+
+    norg32_inst: norg32
+	port map(
+	i_A => i_A,
+	i_B => muxtoshift,
+	o_F => norout
 	);
 
     addsubi_inst: addsubi
@@ -89,9 +172,71 @@ begin
     busmux_inst2: busmux2to1
 	port map(
 	i_S => ShiftEn,
-	i_D0 => addsubiout,
+	i_D0 => mux5out,
 	i_D1 => shiftout,
+	o_Q => mux2out
+	);
+
+    busmux_inst3: busmux2to1
+	port map(
+	i_S => GateEn(0),
+	i_D0 => andout,
+	i_D1 => xorout,
+	o_Q => mux3out
+	);
+
+    busmux_inst4: busmux2to1
+	port map(
+	i_S => GateEn(0),
+	i_D0 => orout,
+	i_D1 => norout,
+	o_Q => mux4out
+	);
+
+    busmux_inst5: busmux2to1
+	port map(
+	i_S => GateEn(1),
+	i_D0 => mux3out,
+	i_D1 => mux4out,
+	o_Q => mux5out
+	);
+
+    busmux_inst6: busmux2to1
+	port map(
+	i_S =>  AltEn,
+	i_D0 => addsubiout,
+	i_D1 => mux2out,
 	o_Q => o_ALU
 	);
+    
+    mux_inst7: mux2to1
+	port map(
+	i_S =>  BranchSel(0),
+	i_D0 => s_beq,
+	i_D1 => s_bge,
+	o_Q => mux7out
+	);
+
+    mux_inst8: mux2to1
+	port map(
+	i_S =>  BranchSel(0),
+	i_D0 => s_blt,
+	i_D1 => s_bne,
+	o_Q => mux8out
+	);
+
+    mux_inst9: mux2to1
+	port map(
+	i_S =>  BranchSel(1),
+	i_D0 => mux7out,
+	i_D1 => mux8out,
+	o_Q => o_zero
+	);
+
+    s_beq <= '1' when (addsubiout = x"00000000") else '0';
+    s_bge <= '1' when (addsubiout(31) = '0') else '0';
+    s_blt <= '1' when (addsubiout(31) = '1') else '0';
+    s_bne <= '0' when (addsubiout = x"00000000") else '1';
+
 
 end structure;
