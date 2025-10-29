@@ -1,0 +1,288 @@
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity tb_ALU is
+end tb_ALU;
+
+architecture sim of tb_ALU is
+
+    -- Component under test
+    component ALU
+        generic(N : integer := 32);
+        port (
+            i_A        : in  std_logic_vector(N-1 downto 0);
+            i_B        : in  std_logic_vector(N-1 downto 0);
+            i_imm      : in  std_logic_vector(N-1 downto 0);
+            ALUSrc     : in  std_logic;
+            AltEn      : in  std_logic;
+            ShiftEn    : in  std_logic;
+            GateEn     : in  std_logic_vector(1 downto 0);
+            BranchSel     : in  std_logic_vector(1 downto 0);
+            ShiftDir   : in  std_logic;
+            ShiftArith : in  std_logic;
+            i_Sub      : in  std_logic;
+            o_ALU      : out std_logic_vector(N-1 downto 0);
+            o_Cout     : out std_logic;
+	    o_zero     : out std_logic
+        );
+    end component;
+
+    -- signals
+    signal clk        : std_logic := '0';
+    signal i_A        : std_logic_vector(31 downto 0);
+    signal i_B        : std_logic_vector(31 downto 0);
+    signal i_imm      : std_logic_vector(31 downto 0);
+    signal ALUSrc     : std_logic;
+    signal AltEn      : std_logic;
+    signal ShiftEn    : std_logic;
+    signal GateEn     : std_logic_vector(1 downto 0);
+    signal BranchSel     : std_logic_vector(1 downto 0);
+    signal ShiftDir   : std_logic;
+    signal ShiftArith : std_logic;
+    signal i_Sub      : std_logic;
+    signal o_ALU      : std_logic_vector(31 downto 0);
+    signal o_Cout     : std_logic;
+    signal o_zero     : std_logic;
+
+
+
+begin
+
+    -- DUT instance
+    DUT : ALU
+        port map(
+            i_A        => i_A,
+            i_B        => i_B,
+            i_imm      => i_imm,
+            ALUSrc     => ALUSrc,
+            AltEn      => AltEn,
+            ShiftEn    => ShiftEn,
+            GateEn     => GateEn,
+	    BranchSel  => BranchSel,
+            ShiftDir   => ShiftDir,
+            ShiftArith => ShiftArith,
+            i_Sub      => i_Sub,
+            o_ALU      => o_ALU,
+            o_Cout     => o_Cout,
+	    o_zero     => o_zero
+        );
+
+    -- stimulus process run 1600
+    stim_proc : process
+    begin
+        -- Initialize inputs
+        i_A        <= x"0000000F";
+        i_B        <= x"00000003";
+        i_imm      <= x"00000002";
+        ALUSrc     <= '0';
+        AltEn      <= '0';
+        ShiftEn    <= '0';
+        GateEn     <= "00";
+	BranchSel  <= "00";
+        ShiftDir   <= '0';
+        ShiftArith <= '0';
+        i_Sub      <= '0';
+        wait for 100 ns;
+
+        ---------------------------------------------------
+        -- ADD (register)
+        ---------------------------------------------------
+        AltEn <= '0';
+        ALUSrc <= '0';
+        i_Sub <= '0';
+        wait for 100 ns;
+	--EXPECTED: x12
+
+        ---------------------------------------------------
+        -- SUB (register)
+        ---------------------------------------------------
+        AltEn <= '0';
+        i_Sub <= '1';
+        wait for 100 ns;
+	--EXPECTED: xC
+
+        ---------------------------------------------------
+        -- ADD (immediate)
+        ---------------------------------------------------
+        ALUSrc <= '1';
+        i_Sub <= '0';
+        wait for 100 ns;
+	--EXPECTED: x11
+
+        ---------------------------------------------------
+        -- AND (register)
+        ---------------------------------------------------
+        AltEn <= '1';
+        ShiftEn <= '0';
+        GateEn <= "00";
+        ALUSrc <= '0';
+        wait for 100 ns;
+	--EXPECTED: x3
+
+        ---------------------------------------------------
+        -- XOR
+        ---------------------------------------------------
+        GateEn <= "01";
+        wait for 100 ns;
+	--EXPECTED: xC
+
+        ---------------------------------------------------
+        -- OR
+        ---------------------------------------------------
+        GateEn <= "10";
+        wait for 100 ns;
+	--EXPECTED: xF
+
+        ---------------------------------------------------
+        -- NOR
+        ---------------------------------------------------
+        GateEn <= "11";
+        wait for 100 ns;
+	--EXPECTED: xFFFFFFF0
+
+        ---------------------------------------------------
+        -- SHIFT LEFT LOGICAL
+        ---------------------------------------------------
+        AltEn <= '1';
+        ShiftEn <= '1';
+        ShiftDir <= '0';   -- left
+        ShiftArith <= '0'; -- logical
+        i_A <= x"00000001";
+        i_imm <= x"00000004"; -- shift by 4
+        ALUSrc <= '1';
+        wait for 100 ns;
+	--EXPECTED: x10
+
+        ---------------------------------------------------
+        -- SHIFT RIGHT LOGICAL
+        ---------------------------------------------------
+        ShiftDir <= '1';  -- right
+        ShiftArith <= '0';
+        i_A <= x"000000F0";
+        i_imm <= x"00000004";
+        wait for 100 ns;
+	--EXPECTED: xF
+
+        ---------------------------------------------------
+        -- SHIFT RIGHT ARITHMETIC
+        ---------------------------------------------------
+        ShiftDir <= '1';
+        ShiftArith <= '1';
+        i_A <= x"F0000000"; -- signed negative value
+        i_imm <= x"00000004";
+        wait for 100 ns;
+	--EXPECTED: xFF000000
+
+        ---------------------------------------------------
+        -- SHIFT LEFT with register source
+        ---------------------------------------------------
+        ALUSrc <= '0';
+	ShiftArith <= '0';
+        i_B <= x"00000002";
+        i_A <= x"00000003";
+        ShiftDir <= '0';
+        wait for 100 ns;
+	--EXPECTED: xC
+
+	---------------------------------------------------
+	-- BEQ
+	---------------------------------------------------
+	AltEn <= '0';
+	i_Sub <= '1';
+	ALUSrc <= '0';
+	BranchSel <= "00";
+        i_B <= x"00000002";
+        i_A <= x"00000002";
+	wait for 100 ns;
+	--EXPECTED: 1
+
+	---------------------------------------------------
+	-- BGE
+	---------------------------------------------------
+	AltEn <= '0';
+	i_Sub <= '1';
+	ALUSrc <= '0';
+	BranchSel <= "01";
+        i_B <= x"00000002";
+        i_A <= x"00000002";
+	wait for 100 ns;
+	--EXPECTED: 1
+
+	---------------------------------------------------
+	-- BLT
+	---------------------------------------------------
+	AltEn <= '0';
+	i_Sub <= '1';
+	ALUSrc <= '0';
+	BranchSel <= "10";
+        i_B <= x"00000002";
+        i_A <= x"00000002";
+	wait for 100 ns;
+	--EXPECTED: 0
+
+	---------------------------------------------------
+	-- BNE
+	---------------------------------------------------
+	AltEn <= '0';
+	i_Sub <= '1';
+	ALUSrc <= '0';
+	BranchSel <= "11";
+        i_B <= x"00000002";
+        i_A <= x"00000002";
+	wait for 100 ns;
+	--EXPECTED: 0
+
+	---------------------------------------------------
+	-- BNE
+	---------------------------------------------------
+	AltEn <= '0';
+	i_Sub <= '1';
+	ALUSrc <= '0';
+	BranchSel <= "11";
+        i_B <= x"00000003";
+        i_A <= x"00000002";
+	wait for 100 ns;
+	--EXPECTED: 1
+
+	---------------------------------------------------
+	-- BLT
+	---------------------------------------------------
+	AltEn <= '0';
+	i_Sub <= '1';
+	ALUSrc <= '0';
+	BranchSel <= "10";
+        i_B <= x"00000003";
+        i_A <= x"00000002";
+	wait for 100 ns;
+	--EXPECTED: 1
+
+	---------------------------------------------------
+	-- BEQ
+	---------------------------------------------------
+	AltEn <= '0';
+	i_Sub <= '1';
+	ALUSrc <= '0';
+	BranchSel <= "00";
+        i_B <= x"00000001";
+        i_A <= x"00000002";
+	wait for 100 ns;
+	--EXPECTED: 0
+
+	---------------------------------------------------
+	-- BGE
+	---------------------------------------------------
+	AltEn <= '0';
+	i_Sub <= '1';
+	ALUSrc <= '0';
+	BranchSel <= "01";
+        i_B <= x"00000003";
+        i_A <= x"00000002";
+	wait for 100 ns;
+	--EXPECTED: 0
+
+        wait;
+    end process;
+
+end sim;

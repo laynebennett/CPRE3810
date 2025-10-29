@@ -1,0 +1,15 @@
+/home/layneben/boolean_function.v {1 {vlog -work work -vopt -stats=none /home/layneben/boolean_function.v
+QuestaSim-64 vlog 2025.1_2 Compiler 2025.04 Apr  7 2025
+-- Compiling module boolean_function
+
+Top level modules:
+	boolean_function
+
+} {} {}} /home/layneben/tb_boolean_function.v {1 {vlog -work work -vopt -stats=none /home/layneben/tb_boolean_function.v
+QuestaSim-64 vlog 2025.1_2 Compiler 2025.04 Apr  7 2025
+-- Compiling module tb_boolean_function
+
+Top level modules:
+	tb_boolean_function
+
+} {} {}}

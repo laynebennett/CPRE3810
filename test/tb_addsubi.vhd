@@ -132,7 +132,6 @@ begin
     -- Expected: 0 - 5 = -5 (in 2's complement: "1011"), Carry-out = '1' (borrow)
     -- o_Sum = "1011", o_Cout = '0'
 
-    -- End of tests
     wait;
   end process;
 
